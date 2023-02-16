@@ -1,0 +1,21 @@
+<table id="customers" *ngIf="users">
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Age</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let user of users">
+    <td>{{user.id}}</td>
+    <td>{{user.name}}</td>
+    <td>{{user.email}}</td>
+    <td>{{user.age}}</td>
+    <td class="action"> 
+      <a class="btn btn-success" [routerLink]="['/update', user.id]">Update</a>
+      <a class="btn btn-info" [routerLink]="['/users', user.id]">Details</a>
+      <a class="btn btn-danger" (click)="deleteUser(user.id)">Delete</a>   
+    </td>
+  </tr>
+</table>
+<!-- [routerLink]="['/users', user.id] -->

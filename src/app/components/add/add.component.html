@@ -1,0 +1,14 @@
+<div>
+    <form action="/home.html">
+      <label for="fname">Name</label>
+      <input #name type="text" id="name" name="name" placeholder="Your name..">
+  
+      <label for="email">Email</label>
+      <input #email type="email" id="email" name="email" placeholder="Your email..">
+
+      <label for="Age">Age</label>
+      <input #age type="text" id="age" name="age" placeholder="Your Age..">
+    
+      <input type="submit" value="Submit" (click)="add(name.value, email.value, age.value)">
+    </form>
+  </div>
